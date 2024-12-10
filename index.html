@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Analysis Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Analysis Program BETA</h1>
+
+        <div id="dropZone" class="file-section">
+            <input type="file" id="fileInput" accept="image/png, image/jpeg" style="display: none;">
+            <label for="fileInput" id="fileLabel">No file selected</label>
+            <button onclick="document.getElementById('fileInput').click()">Choose PNG/JPG File</button>
+        </div>
+
+        <img id="imagePreview" alt="Image preview">
+
+        <div class="button-container">
+            <button id="calculateButton" disabled>Analyze Colors</button>
+        </div>
+
+        <div id="colorPreview"></div>
+
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Color</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
